@@ -27,7 +27,7 @@ export class App extends Component {
             <Route exact path='/401-entrance-exam-301d19-react/frontend/src/components/ViewAllBackedData.js'>
               <ViewAllBackedData data={this.state.myAPIdata} />
             </Route>
-            <Route path='/401-entrance-exam-301d19-react/frontend/src/components/MyFav.js'>
+            <Route exact path='/401-entrance-exam-301d19-react/frontend/src/components/MyFav.js'>
 
             </Route>
           </Switch>
