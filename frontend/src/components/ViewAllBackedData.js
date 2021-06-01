@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class Viewdata extends Component {
+export class ViewAllBackedData extends Component {
 
 
   render() {
@@ -23,4 +23,4 @@ export class Viewdata extends Component {
 
 
 
-export default Viewdata;
+export default ViewAllBackedData;

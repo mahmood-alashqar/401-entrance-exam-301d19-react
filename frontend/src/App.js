@@ -1,7 +1,9 @@
 // no need for usfel comment i think the name will explain everything
 import React, { Component } from 'react'
 import axios from "axios";
-import ViewAllBackeddata from './components/ViewAllBackeddata';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ViewAllBackedData from './components/ViewAllBackedData';
+import MyFav from './components/MyFav';
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -19,10 +21,18 @@ export class App extends Component {
   }
   render() {
     return (
-      <div>
-        <ViewAllBackeddata data={this.state.myAPIdata} />
+      <>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path='/401-entrance-exam-301d19-react/frontend/src/components/ViewAllBackedData.js'>
+              <ViewAllBackedData data={this.state.myAPIdata} />
+            </Route>
+            <Route path='/401-entrance-exam-301d19-react/frontend/src/components/MyFav.js'>
 
-      </div>
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      </>
     )
   }
 }
